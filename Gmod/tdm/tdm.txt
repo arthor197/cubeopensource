@@ -1,0 +1,15 @@
+"Gamemode"
+{
+	"name"		"Team Deathmatch"
+	"title"		"Team Deathmatch"
+	"version"	"1.0"
+	"menusystem"	"1"
+ 
+	"author_name"	"The Cube Programming Team"
+	"author_email"	""
+	"author_url"	"forums.thecubeserver.com"
+ 
+	"icon"		""
+	"info"		""
+	"hide"		""
+}
