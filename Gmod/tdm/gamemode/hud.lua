@@ -12,18 +12,18 @@ local health = client:Health()
 local ammo = client:GetActiveWeapon():Clip1() --amount of ammo in the magazine
 local ammo2 = client:GetAmmoCount(client:GetActiveWeapon():GetPrimaryAmmoType()) --amount of ammo left
 local kd = math.Round(100 * client:Frags() / client:Deaths()) / 100
-local name = client:Nick()
+local steamid = client:SteamID( )
 local maxammo = client:GetActiveWeapon().Primary.ClipSize
  
-//Name
+//SteamID
 draw.RoundedBox(8, 10, ScrH() - 80 - 50 , 250, 120, Color(0,0,0,240)) --black box
+draw.SimpleText(steamid, "default", 20, ScrH() - 120, hudtable.colorwhite ) --shows the SteamID of the client
  
-//group name
-draw.SimpleText(name, "default", 20, ScrH() - 120, hudtable.colorwhite ) --shows the name of the client
+//Rank
 if client:IsSuperAdmin() then draw.SimpleText("Rank: SuperAdmin", "default", 20, ScrH() - 100, Color( 255, 0, 0, 255 ) )
 elseif client:IsAdmin() then draw.SimpleText("Rank: Admin", "default", 20, ScrH() - 100, Color( 0, 255, 0, 255 ) )
 elseif client:IsUserGroup("VIP") then draw.SimpleText("Rank: VIP", "default", 20, ScrH() - 100, Color( 0, 0, 255, 255 ) )    
-elseif !client:IsUserGroup("VIP") then draw.SimpleText("Rank: Normal", "default", 20, ScrH() - 100, Color( 200, 200, 200, 255 ) ) end
+elseif client:IsUserGroup("Player") then draw.SimpleText("Rank: Player", "default", 20, ScrH() - 100, Color( 200, 200, 200, 255 ) ) end
  
 //Kill Death Ratio
 if client:Deaths() > 0 then
