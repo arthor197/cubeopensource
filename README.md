@@ -21,4 +21,4 @@ More Information will be published as we get deeper into the project like, Work 
 
 The final MC product will be published on bukkit as an open source Plugin. For Gmod the Team deathmatch gamemode will be uploaded to the workshop (Open source.)
 
-Kyle
+Kyle Smith
