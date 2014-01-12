@@ -24,11 +24,11 @@ function GM:PlayerInitialSpawn( ply ) //"When the player first joins the server 
  
 	if ply:Team() == 1 then
 		ply:GiveAmmo( 255,	"Pistol", 		true )
-		ply:Give( "empty_weapon" )
+		ply:Give( "grub_m9fs" )
 		ply:SetModel( "models/player/combine_soldier.mdl" )
  
 	elseif ply:Team() == 2 then
-		ply:Give("empty_weapon")
+		ply:Give("grub_m9fs")
 		ply:SetModel( "models/player/combine_soldier_prisonguard.mdl" )
  
 	end
@@ -49,12 +49,12 @@ end
  
 function WeaponSelect( ply, cmd, args )
 	if args[1] == "pistol" then
-	        ply:Give( "weapon_pistol" )
-		ply:ChatPrint( "You got a pistol!" )
+	        ply:Give( "grub_m9fs" )
+		ply:ChatPrint( "You got a Beretta!" )
 	end
 	if args[1] == "smg" then
-		ply:Give( "weapon_smg" )
-		ply:ChatPrint( "You got an SMG!" )
+		ply:Give( "weapon_m24sd" )
+		ply:ChatPrint( "You got a Sniper!" )
         end
 end
 
